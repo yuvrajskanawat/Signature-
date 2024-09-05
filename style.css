@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Main Container */
+.main {
+    width: 90%;
+    height: 80%;
+    justify-content: space-between;
+    margin-top: 40px;
+    max-width: 800px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-sizing: border-box; /* Include padding and borders in width and height */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+
+/* Flexbox Layout */
+.top, .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.block > p {
+    margin: 0;
+    width: 30%;
+    text-align: right;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.block > input, .block > select {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.block > input:focus, .block > select:focus {
+    border: 1px solid #6e8efb;
+    outline: none;
+}
+
+/* Canvas Styling */
+.canvas-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Hide any overflow from canvas */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.canvas {
+    border: 2px dashed #6e8efb;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Ensure canvas does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Bottom Button Section */
+.bottom {
+    margin-top: 20px;
+}
+
+.bottom > button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.bottom > button.btn-danger {
+    background-color: #e74c3c;
+}
+
+.bottom > button.btn-success {
+    background-color: #2ecc71;
+}
+
+.bottom > button.btn-warning {
+    background-color: #f39c12;
+}
+
+.bottom > button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .block > p {
+        width: 40%;
+        text-align: left;
+    }
+
+    .block > input, .block > select {
+        width: 55%;
+    }
+}
